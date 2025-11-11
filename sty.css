@@ -1,0 +1,89 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #222;
+  padding: 20px;
+}
+
+#tieude {
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.table-wrap {
+  min-width: 420px;
+}
+
+table {
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.06);
+}
+
+td {
+  border: 1px solid #555;
+  padding: 6px;
+  font-size: 14px;
+}
+
+th {
+  background-color: #f0f0f0;
+  padding: 8px;
+}
+
+input {
+  width: 50px;
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #666;
+  outline: none;
+  font-size: 16px;
+}
+
+.sidebar {
+  width: 240px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  padding: 12px;
+  border-radius: 6px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.04);
+}
+
+.sidebar h3 { margin: 0 0 8px 0; font-size: 16px; }
+.sidebar label { display: block; margin: 8px 0; font-size: 14px; }
+.sidebar input { width: 80px; margin-left: 6px; }
+.sidebar .hint { font-size: 12px; color: #666; margin-top: 8px; }
+
+#xacnhan {
+  margin-top: 12px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ketqua {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* remove number buttons on webkit */
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+#themcot {
+  margin-top: 100px;
+  padding: 10px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}

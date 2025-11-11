@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mẫu Số Liệu Ghép Nhóm</title>
+    <link rel="stylesheet" href="sty.css">
+</head>
+<body>
+    <h1 id="tieude">Xin chào hãy nhập số liệu vào đây!</h1>
+
+    <div class="container">
+      <div class="table-wrap">
+        <button id="themCot">Thêm cột</button>
+
+        <table>
+
+    <tr>
+        <th>Mẫu số</th>
+        <td>[ <input type="text" class="number-only" placeholder="số" data-name="m1_1"> ;
+             <input type="text" class="number-only" placeholder="số" data-name="m1_2"> )</td>
+        <td>[ <input type="text" class="number-only" placeholder="số" data-name="m2_1"> ;
+             <input type="text" class="number-only" placeholder="số" data-name="m2_2"> )</td>
+        <td>[ <input type="text" class="number-only" placeholder="số" data-name="m3_1"> ;
+             <input type="text" class="number-only" placeholder="số" data-name="m3_2"> )</td>
+        <td>[ <input type="text" class="number-only" placeholder="số" data-name="m4_1"> ;
+             <input type="text" class="number-only" placeholder="số" data-name="m4_2"> )</td>
+        <td>[ <input type="text" class="number-only" placeholder="số" data-name="m5_1"> ;
+             <input type="text" class="number-only" placeholder="số" data-name="m5_2"> )</td>
+       
+    </tr>
+
+    <tr>
+        <th>Tần suất</th>
+        <td><input type="text" class="number-only" placeholder="số" data-name="f1"></td>
+        <td><input type="text" class="number-only" placeholder="số" data-name="f2"></td>
+        <td><input type="text" class="number-only" placeholder="số" data-name="f3"></td>
+        <td><input type="text" class="number-only" placeholder="số" data-name="f4"></td>
+        <td><input type="text" class="number-only" placeholder="số" data-name="f5"></td>
+      
+    </tr>
+</table>
+            </div>
+
+            <!-- Sidebar to add a single column (mẫu số [a;b) and tần suất) -->
+            <aside class="sidebar">
+                <h3>Thêm mẫu số & tần suất</h3>
+                <label> Mẫu số: [
+                    <input id="sampleMin" type="text" class="number-only" placeholder="a"> ;
+                    <input id="sampleMax" type="text" class="number-only" placeholder="b"> )
+                </label>
+
+                <label> Tần suất:
+                    <input id="freq" type="text" class="number-only" placeholder="f"> 
+                </label>
+
+                <button id="addFromSidebar">Thêm ô bên cạnh</button>
+                <p class="hint">Hoặc dùng nút "Thêm cột" phía trên để thêm cột trống.</p>
+            </aside>
+        </div>
+
+        <button id="xacnhan" onclick="xacNhan()">Xác nhận</button>
+        <p id="ketqua" class="ketqua"></p>
+
+        <script src="script.js"></script>
+</body>
+</html>
