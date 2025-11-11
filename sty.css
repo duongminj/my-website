@@ -21,6 +21,17 @@ body {
   min-width: 420px;
 }
 
+/* Make table horizontally scrollable on narrow screens (mobile) */
+.table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+}
+
+/* Ensure table has a reasonable minimum width so columns can be seen by swiping horizontally */
+table {
+  min-width: 760px; /* tweak as needed depending on number of columns */
+}
+
 table {
   border-collapse: collapse;
   text-align: center;
@@ -86,4 +97,40 @@ input[type=number]::-webkit-inner-spin-button {
   padding: 10px 10px;
   font-size: 13px;
   cursor: pointer;
+}
+
+/* Small-screen adjustments */
+@media (max-width: 700px) {
+  /* Stack elements vertically on small screens and hide the sidebar to give more room */
+  .container { flex-direction: column; align-items: stretch; }
+  .sidebar { display: none; }
+  .table-wrap { width: 100%; }
+  /* hint shown as pseudo element on the table area to tell user to swipe horizontally */
+  .table-wrap::after {
+    content: 'Vuốt ngang để xem hết bảng (hoặc xoay ngang màn hình)';
+    display: block;
+    text-align: center;
+    font-size: 13px;
+    color: #666;
+    margin-top: 8px;
+  }
+}
+
+/* If device is in portrait orientation, show a subtle top banner suggesting rotation */
+@media (orientation: portrait) and (max-width: 900px) {
+  body::before {
+    content: 'Để xem bảng đầy đủ hãy xoay điện thoại sang ngang hoặc vuốt ngang';
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    padding: 8px 10px;
+    font-size: 13px;
+    text-align: center;
+    z-index: 9999;
+  }
+  /* add small top padding so content isn't hidden under banner */
+  body { padding-top: 42px; }
 }
